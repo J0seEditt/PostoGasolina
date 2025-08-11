@@ -101,8 +101,9 @@ public class Main {
         scanner.nextLine();
         System.out.print("Data de Admissão: ");
         String dataAdmissao = scanner.nextLine();
-
-        Funcionario funcionario = new Funcionario(nome, cpf, telefone, cargo, salario, dataAdmissao);
+        System.out.print("Senha: ");
+        String senha = scanner.nextLine();
+        Funcionario funcionario = new Funcionario(nome, cpf, telefone, cargo, salario, dataAdmissao, senha);
         pessoas.add(funcionario);
         System.out.println("Funcionário cadastrado com sucesso!");
     }
@@ -121,9 +122,11 @@ public class Main {
         double salario = scanner.nextDouble();
         System.out.print("Anos de Experiência: ");
         int anosExperiencia = scanner.nextInt();
+        System.out.print("Senha: ");
+        String senha = scanner.nextLine();
         scanner.nextLine();
 
-        Gerente gerente = new Gerente(nome, cpf, telefone, departamento, salario, anosExperiencia);
+        Gerente gerente = new Gerente(nome, cpf, telefone, departamento, salario, anosExperiencia, senha);
         pessoas.add(gerente);
         System.out.println("Gerente cadastrado com sucesso!");
     }
